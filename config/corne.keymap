@@ -21,7 +21,7 @@
         };
 
         // press ones for ctrl, and press twice for sticky alt
-        td1: tap_dance_0 {
+        td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_1";
             #binding-cells = <0>;
