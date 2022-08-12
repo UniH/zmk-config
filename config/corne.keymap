@@ -34,7 +34,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_1";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&kp C_VOL_DN>, <&kp C_PREV>;
         };
 
@@ -43,7 +43,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_1";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&kp C_VOL_UP>, <&kp C_NEXT>;
         };
     };
@@ -88,7 +88,7 @@
                         bindings = <
    &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2 &bt BT_SEL 3  &bt BT_SEL 4     &trans  &trans         &kp UP     &trans        &trans    &trans
    &kp TAB     &kp LCTRL     &kp LSHFT     &kp SPACE    &kp LALT      &kp RET          &trans  &kp LEFT       &kp DOWN   &kp RIGHT     &trans    &trans
-   &trans      &trans        &trans        &trans       &trans        &trans           &trans  &kp C_VOL_DN   &td2       &td3          &trans    &trans
+   &trans      &trans        &trans        &trans       &trans        &trans           &trans  &td2           &kp C_PP       &td3          &trans    &trans
                     	                   &trans       &trans        &trans           &trans  &trans         &trans
                         >;
                 };
