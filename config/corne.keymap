@@ -64,12 +64,12 @@
                 raise_layer {
 // -----------------------------------------------------------------------------------------
 // | BTCLR    | BT1          | BT2         | BT3       | BT4          | BT5       |   |            |              |   up     |             |           |        |
-// | TAB      | CTL          | SHIFT       | SPACE     | ALT          | ENTER     |   |            |   left       |  down    |  right      |           |        |
+// | TAB      | CTL          | SHIFT       | SPACE     | ALT          | ENTER     |   | home       |   left       |  down    |  right      |  end      |        |
 // |          |              |             |           |              |           |   | prev       | volume -     |  play    | volume +    |  next     |        |
 //                                         | GUI       |              | SPC       |   |            |              |          |
                         bindings = <
    &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2 &bt BT_SEL 3  &bt BT_SEL 4     &trans      &trans         &kp UP     &trans        &trans      &trans
-   &kp TAB     &kp LCTRL     &kp LSHFT     &kp SPACE    &kp LALT      &kp RET          &trans      &kp LEFT       &kp DOWN   &kp RIGHT     &trans      &trans
+   &kp TAB     &kp LCTRL     &kp LSHFT     &kp SPACE    &kp LALT      &kp RET          &kp HOME    &kp LEFT       &kp DOWN   &kp RIGHT     &kp END     &trans
    &trans      &trans        &trans        &trans       &trans        &trans           &kp C_PREV  &kp C_VOL_DN   &kp C_PP   &kp C_VOL_UP  &kp C_NEXT  &trans
                     	                   &trans       &trans        &trans           &trans      &trans         &trans
                         >;
