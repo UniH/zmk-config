@@ -9,31 +9,18 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-
-    behaviors {
-        // press once for ctrl, and press twice for sticky alt
-        td0: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_0";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LCTRL>, <&sk LALT>;
-        };
-    };
-
-
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// | ESC           |  Q           |  W     |  E     |  R      |  T  |       |  Y      |  U   |  I       |  O     |  P      |  `  |
-// | CTRL/ALT      |  A           |  S     |  D     |  F      |  G  |       |  H      |  J   |  K       |  L     |  ;      |  '  |
-// | SHFT/CAPL     |  HT ALR/Z    |  X     |  C     |  V      |  B  |       |  N      |  M   |  ,       |  .     |  /      | ALT |
-//                                         | GUI    | LWR     | SPC |       | BKSP    | RSE  | ENT      |
+// | ESC           |  Q         |  W     |  E     |  R      |  T  |       |  Y      |  U   |  I       |  O     |  P      |  `  |
+// | CTRL/ALT      |  A         |  S     |  D     |  F      |  G  |       |  H      |  J   |  K       |  L     |  ;      |  '  |
+// | SHFT/CAPL     |  ALR/Z     |  X     |  C     |  V      |  B  |       |  N      |  M   |  ,       |  .     |  /      | ALT |
+//                                       | GUI    | LWR     | SPC |       | BKSP    | RSE  | ENT      |
                                      bindings = <
     &kp ESC         &kp Q       &kp W    &kp E    &kp R    &kp T         &kp Y     &kp U  &kp I      &kp O    &kp P     &kp GRAVE
-    &td0            &kp A       &kp S    &kp D    &kp F    &kp G         &kp H     &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+    &kp LCTRL       &kp A       &kp S    &kp D    &kp F    &kp G         &kp H     &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
     &mt LSHFT CAPS  &mt LALT Z  &kp X    &kp C    &kp V    &kp B         &kp N     &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RALT
                                          &kp LGUI &mo 1    &kp SPACE     &kp BSPC  &mo 2  &kp RET
                         >;
