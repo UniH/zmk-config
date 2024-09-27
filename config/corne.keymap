@@ -12,7 +12,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        char {
             // -----------------------------------------------------------------------------------------
             // | CTRL/ESC      |  Q         |  W     |  E     |  R      |  T  |       |  Y      |  U   |  I       |  O     |  P      |  -    |
             // | ALT/TAB       |  A         |  S     |  D     |  F      |  G  |       |  H      |  J   |  K       |  L     |  ;      |  '    |
@@ -20,14 +20,14 @@
             //                                       | GUI    | LWR     | SPC |       | BKSP    | RSE  | ENT      |
 
             bindings = <
-&mt LCTRL ESC  &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y         &kp U  &kp I      &kp O    &kp P     &kp MINUS
-&mt LALT TAB   &kp A  &kp S  &kp D     &kp F  &kp G        &kp H         &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT      &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N         &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                             &kp LGUI  &mo 1  &kp SPACE    &lt 3 DELETE  &mo 2  &kp RET
+&mt LCTRL ESC  &kp Q  &kp W  &kp E     &kp R  &kp T          &kp Y         &kp U  &kp I      &kp O    &kp P     &kp MINUS
+&mt LALT TAB   &kp A  &kp S  &kp D     &kp F  &kp G          &kp H         &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT      &kp Z  &kp X  &kp C     &kp V  &kp B          &kp N         &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                             &kp LGUI  &mo 1  &lt 3 SPACE    &lt 4 DELETE  &mo 2  &kp RET
             >;
         };
 
-        lower_layer {
+        symbo {
             // -----------------------------------------------------------------------------------------
             // | CTRL/CAPS     |  1      |  2       |  3      |  4       |  5       |  |    6        |  7       |  8       |  9      |  0      |  `    |
             // | ALT/TAB       |  !      |  @       |  #      |  $       |  %       |  |    ^        |  &       |  *       |  (      |  )      |  \    |
@@ -35,14 +35,14 @@
             //                                      | GUI     |          | SPC      |  | ALT+BKSP    |          | ALT      |
 
             bindings = <
-&mt LCTRL CAPS  &kp N1    &kp N2     &kp N3     &kp N4    &kp N5       &kp N6        &kp N7    &kp N8     &kp N9    &kp N0     &kp GRAVE
-&trans          &kp EXCL  &kp AT     &kp HASH   &kp DLLR  &kp PRCNT    &kp CRRT      &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR   &kp BSLH
-&kp LSHFT       &kp PLUS  &kp UNDER  &kp EQUAL  &kp LBRC  &kp RBRC     &kp LBKT      &kp RBKT  &kp LT     &kp GT    &kp QMARK  &sk RSHFT
-                                     &kp LGUI   &trans    &kp SPACE    &kp LA(BSPC)  &trans    &kp RALT
+&mt LCTRL CAPS  &kp N1    &kp N2     &kp N3     &kp N4    &kp N5       &kp N6        &kp N7             &kp N8     &kp N9    &kp N0     &kp GRAVE
+&trans          &kp EXCL  &kp AT     &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET     &kp AMPS           &kp ASTRK  &kp LPAR  &kp RPAR   &kp BSLH
+&kp LSHFT       &kp PLUS  &kp UNDER  &kp EQUAL  &kp LBRC  &kp RBRC     &kp LBKT      &kp RBKT           &kp LT     &kp GT    &kp QMARK  &sk RSHFT
+                                     &kp LGUI   &trans    &kp SPACE    &kp LA(BSPC)  &kp RIGHT_COMMAND  &kp RALT
             >;
         };
 
-        raise_layer {
+        function {
             // -----------------------------------------------------------------------------------------
             // |          |             |             |           |              |           |   |            |              |   up     |             | BT1       | BT clear all  |
             // |          |             |             |           |              |           |   | home       |   left       |  down    |  right      |  end      |               |
@@ -59,10 +59,19 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   &trans
-&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&mt LCTRL ESC  &kp F10    &kp F9    &kp F8     &kp F7   &kp F6     &kp Y     &kp U              &kp I      &kp O    &kp P     &kp MINUS
+&mt LALT TAB   &kp LCTRL  &kp LALT  &kp LSHFT  &kp ESC  &kp TAB    &kp H     &kp J              &kp K      &kp L    &kp SEMI  &kp SQT
+&kp F1         &kp F2     &kp F3    &kp F4     &kp F5   &kp F6     &kp N     &kp M              &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                                    &kp LGUI   &trans   &trans     &kp BSPC  &kp RIGHT_COMMAND  &kp RET
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&mt LCTRL ESC  &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y         &kp U    &kp I      &kp O     &kp P      &kp MINUS
+&mt LALT TAB   &kp A  &kp S  &kp D     &kp F  &kp G        &kp TAB       &kp ESC  &kp RSHFT  &kp RALT  &kp RCTRL  &kp SQT
+&kp LSHFT      &kp Z  &kp X  &kp C     &kp V  &kp B        &kp F7        &kp F8   &kp F9     &kp F10   &kp F11    &kp F12
+                             &kp LGUI  &mo 1  &kp SPACE    &lt 0 DELETE  &mo 2    &kp RET
             >;
         };
     };
