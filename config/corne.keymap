@@ -50,9 +50,9 @@
             //                                        | GUI       | LALT         | SPC       |   |            |              |          |
 
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans      &trans        &kp UP    &trans        &bt BT_SEL 0  &bt BT_CLR_ALL
-&trans  &trans  &trans  &trans  &trans  &trans    &kp HOME    &kp LEFT      &kp DOWN  &kp RIGHT     &kp END       &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp C_PREV  &kp C_VOL_DN  &kp C_PP  &kp C_VOL_UP  &kp C_NEXT    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans      &trans        &kp UP    &trans        &trans      &bt BT_CLR_ALL
+&trans  &trans  &trans  &trans  &trans  &trans    &kp HOME    &kp LEFT      &kp DOWN  &kp RIGHT     &kp END     &bt BT_SEL 0
+&trans  &trans  &trans  &trans  &trans  &trans    &kp C_PREV  &kp C_VOL_DN  &kp C_PP  &kp C_VOL_UP  &kp C_NEXT  &bt BT_SEL 1
                         &trans  &trans  &trans    &trans      &trans        &trans
             >;
         };
