@@ -20,10 +20,10 @@
             //                                       | GUI    | LWR     | SPC |       | BKSP    | RSE  | ENT      |
 
             bindings = <
-&mt LCTRL ESC  &kp Q  &kp W  &kp E     &kp R  &kp T          &kp Y            &kp U  &kp I      &kp O    &kp P     &kp MINUS
-&mt LALT TAB   &kp A  &kp S  &kp D     &kp F  &kp G          &kp H            &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT      &kp Z  &kp X  &kp C     &kp V  &kp B          &kp N            &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                             &kp LGUI  &mo 1  &lt 3 SPACE    &lt 4 BACKSPACE  &mo 2  &kp RET
+&mt LCTRL ESC  &kp Q        &kp W           &kp E             &kp R               &kp T        &kp Y     &kp U                &kp I              &kp O            &kp P                &kp MINUS
+&mt LALT TAB   &mt LCTRL A  &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LEFT_COMMAND F  &kp G        &kp H     &mt RIGHT_COMMAND J  &mt RIGHT_SHIFT K  &mt RIGHT_ALT L  &mt RCTRL SEMICOLON  &kp SQT
+&kp LSHFT      &kp Z        &kp X           &kp C             &kp V               &kp B        &kp N     &kp M                &kp COMMA          &kp DOT          &kp FSLH             &kp RSHFT
+                                            &kp LGUI          &mo 1               &kp SPACE    &kp BSPC  &mo 2                &kp RET
             >;
         };
 
@@ -35,10 +35,10 @@
             //                                      | GUI     |          | SPC      |  | ALT+BKSP    |          | ALT      |
 
             bindings = <
-&mt LCTRL CAPS  &kp N1    &kp N2     &kp N3     &kp N4    &kp N5       &kp N6        &kp N7             &kp N8     &kp N9    &kp N0     &kp GRAVE
-&trans          &kp EXCL  &kp AT     &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET     &kp AMPS           &kp ASTRK  &kp LPAR  &kp RPAR   &kp BSLH
-&kp LSHFT       &kp PLUS  &kp UNDER  &kp EQUAL  &kp LBRC  &kp RBRC     &kp LBKT      &kp RBKT           &kp LT     &kp GT    &kp QMARK  &sk RSHFT
-                                     &kp LGUI   &trans    &kp SPACE    &kp LA(BSPC)  &kp RIGHT_COMMAND  &kp RALT
+&mt LCTRL CAPS  &kp N1    &kp N2     &kp N3     &kp N4    &kp N5       &kp N6        &kp N7    &kp N8     &kp N9    &kp N0     &kp GRAVE
+&trans          &kp EXCL  &kp AT     &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET     &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR   &kp BSLH
+&kp LSHFT       &kp PLUS  &kp UNDER  &kp EQUAL  &kp LBRC  &kp RBRC     &kp LBKT      &kp RBKT  &kp LT     &kp GT    &kp QMARK  &sk RSHFT
+                                     &kp LGUI   &trans    &trans       &kp LA(BSPC)  &trans    &trans
             >;
         };
 
@@ -50,28 +50,10 @@
             //                                        | GUI       | LALT         | SPC       |   |            |              |          |
 
             bindings = <
-&trans  &trans     &trans    &kp TAB    &kp ESCAPE        &trans     &trans      &trans        &kp UP    &trans        &trans      &bt BT_CLR_ALL
-&trans  &kp LCTRL  &kp LALT  &kp LSHFT  &kp LEFT_COMMAND  &kp TAB    &kp HOME    &kp LEFT      &kp DOWN  &kp RIGHT     &kp END     &bt BT_SEL 0
-&trans  &trans     &trans    &trans     &trans            &trans     &kp C_PREV  &kp C_VOL_DN  &kp C_PP  &kp C_VOL_UP  &kp C_NEXT  &bt BT_SEL 1
-                             &trans     &kp LEFT_COMMAND  &trans     &trans      &trans        &trans
-            >;
-        };
-
-        layer_3 {
-            bindings = <
-&mt LCTRL ESC  &trans     &trans    &kp TAB    &kp ESCAPE        &trans     &kp Y     &kp U              &kp I      &kp O    &kp P     &kp MINUS
-&mt LALT TAB   &kp LCTRL  &kp LALT  &kp LSHFT  &kp LEFT_COMMAND  &kp TAB    &kp H     &kp J              &kp K      &kp L    &kp SEMI  &kp SQT
-&kp F1         &kp F2     &kp F3    &kp F4     &kp F5            &kp F6     &kp N     &kp M              &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                                    &kp LGUI   &trans            &trans     &kp BSPC  &kp RIGHT_COMMAND  &kp RET
-            >;
-        };
-
-        layer_4 {
-            bindings = <
-&mt LCTRL ESC  &kp Q  &kp W  &kp E     &kp R             &kp T        &trans   &kp ESCAPE         &kp TAB    &trans    &trans     &trans
-&mt LALT TAB   &kp A  &kp S  &kp D     &kp F             &kp G        &kp TAB  &kp RIGHT_COMMAND  &kp RSHFT  &kp RALT  &kp RCTRL  &kp SQT
-&kp LSHFT      &kp Z  &kp X  &kp C     &kp V             &kp B        &kp F7   &kp F8             &kp F9     &kp F10   &kp F11    &kp F12
-                             &kp LGUI  &kp LEFT_COMMAND  &kp SPACE    &trans   &trans             &kp RET
+&trans  &trans  &trans  &trans  &trans  &trans    &trans      &trans        &kp UP    &trans        &trans      &bt BT_CLR_ALL
+&trans  &trans  &trans  &trans  &trans  &trans    &kp HOME    &kp LEFT      &kp DOWN  &kp RIGHT     &kp END     &bt BT_SEL 0
+&trans  &trans  &trans  &trans  &trans  &trans    &kp C_PREV  &kp C_VOL_DN  &kp C_PP  &kp C_VOL_UP  &kp C_NEXT  &bt BT_SEL 1
+                        &trans  &trans  &trans    &trans      &trans        &trans
             >;
         };
     };
